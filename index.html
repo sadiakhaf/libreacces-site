@@ -315,7 +315,12 @@
 
           <!-- Inquiry Form -->
           <div class="inquire-form-wrap">
-            <form id="inquire-form" class="inquire-form">
+            <form id="inquire-form" class="inquire-form"
+                  action="https://formsubmit.co/hello@studiolibreacces.com"
+                  method="POST" target="_blank">
+              <input type="hidden" name="_subject" value="Estimate request from Studio Libre Accès">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
               <div class="form-row">
                 <div class="form-field">
                   <label for="inq-name">Name</label>
@@ -334,16 +339,13 @@
                 <label for="inq-details">Tell us about your project</label>
                 <textarea id="inq-details" name="details" rows="4" class="input-control input-control--multiline" placeholder="What kind of site? Reference sites you like? Any specific functionality?"></textarea>
               </div>
+              <input type="hidden" name="estimated_budget" id="inq-budget">
+              <input type="hidden" name="pages" id="inq-pages">
               <button type="submit" class="btn btn-solid" id="inquire-submit">Send inquiry</button>
             </form>
-            <div id="inquire-toast" class="form-toast">
-              <h3>Inquiry sent</h3>
-              <p>Thanks for reaching out! We'll get back to you within 2 business days with availability and a detailed quote.</p>
-            </div>
           </div>
         </div>
       </section>
-
       <!-- ===== PRINCIPLES ===== -->
       <section class="principles" id="principles">
         <header class="section-header">
