@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Local/private machine data
+.ssh/
+conf/
+
+*.git/
+admin/
+*.csv
+*.json
+*.txt
