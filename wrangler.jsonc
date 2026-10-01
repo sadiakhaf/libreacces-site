@@ -1,24 +1,28 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "libreacces-site",
-  "compatibility_date": "2026-09-18",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "directory": "."
-  },
-  "observability": {
-    "logs": {
-      "enabled": true,
-      "head_sampling_rate": 1,
-      "invocation_logs": true,
-      "persist": true
-    },
-    "traces": {
-      "enabled": false,
-      "head_sampling_rate": 1,
-      "persist": true
-    }
-  }
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "libreacces-site",
+	"compatibility_date": "2026-09-18",
+	"main": "workers/index.js",
+	"assets": {
+		"directory": "."
+	},
+	"observability": {
+		"enabled": true,
+		"logs": {
+			"enabled": true,
+			"head_sampling_rate": 1,
+			"invocation_logs": true,
+			"persist": true
+		}
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "libreacces-submissions",
+			"database_id": "ad9df56c-8400-46aa-8dba-aefa31a8b363"
+		}
+	],
+	"vars": {
+		"CANONICAL_URL": "https://libreacces.stream"
+	}
 }
