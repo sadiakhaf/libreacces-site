@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style2.css">
+  <link rel="stylesheet" href="/css/animations.css">
 </head>
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
@@ -80,7 +81,8 @@
       </div>
 
       <!-- ===== HERO ===== -->
-      <section class="hero">
+      <section class="hero is-visible">
+        <div class="hero__aurora" aria-hidden="true"></div>
         <p class="eyebrow">Sliding-scale · Kinky, Queer &amp; BIPOC owned · Montréal </p>
         <h1>Your business deserves a home on the internet.</h1>
         <p class="lead">
@@ -102,33 +104,33 @@
       </section>
 
       <!-- ===== WHO WE SERVE ===== -->
-      <section class="who" id="who">
-        <header class="section-header">
+      <section class="who reveal-up" id="who">
+        <header class="section-header reveal-up" data-stagger="1">
           <p class="eyebrow">Who this is for</p>
           <h2>If the ad platforms said no, we say yes.</h2>
         </header>
         <div class="who-grid">
-          <article class="who-card">
+          <article class="who-card reveal-scale" data-stagger="1">
             <h3>Sex workers &amp; agencies</h3>
             <p>Portfolios, booking pages, screening flows, and directories that don't vanish with the next policy change.</p>
           </article>
-          <article class="who-card">
+          <article class="who-card reveal-scale" data-stagger="2">
             <h3>Kinky craft artists &amp; fetish merchants</h3>
             <p>Shopfronts and product galleries for leather, latex, rope, toys, and bespoke goods.</p>
           </article>
-          <article class="who-card">
+          <article class="who-card reveal-scale" data-stagger="3">
             <h3>Shibari performers &amp; educators</h3>
             <p>Class schedules, workshop registrations, tour dates, and teaching portfolios.</p>
           </article>
-          <article class="who-card">
+          <article class="who-card reveal-scale" data-stagger="4">
             <h3>Event organizers</h3>
             <p>Play-party and munch sites with RSVPs, house rules, vetting info, and mailing lists.</p>
           </article>
-          <article class="who-card">
+          <article class="who-card reveal-scale" data-stagger="5">
             <h3>Adjacent creators</h3>
             <p>Photographers, writers, dungeon operators, aftercare services — anyone shut out by "acceptable use" clauses.</p>
           </article>
-          <article class="who-card who-card--note">
+          <article class="who-card who-card--note reveal-scale" data-stagger="6">
             <h3>Why it matters</h3>
             <p>Hosts and payment processors routinely terminate kink and sex-work sites mid-quarter. A site you own, on infrastructure that tolerates you, is risk management.</p>
           </article>
@@ -136,33 +138,33 @@
       </section>
 
       <!-- ===== SERVICES ===== -->
-      <section class="services section-alt" id="services">
-        <header class="section-header">
+      <section class="services section-alt reveal-up" id="services">
+        <header class="section-header reveal-up" data-stagger="1">
           <p class="eyebrow">Services</p>
           <h2>Everything you need to be online, and stay online.</h2>
         </header>
         <div class="services-grid">
-          <article class="service-card">
+          <article class="service-card reveal-scale" data-stagger="1">
             <h3>Website design &amp; build</h3>
             <p>Custom, mobile-first sites from 1-page landing to full multi-page presence. Copy support, SEO basics, analytics you actually control.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card reveal-scale" data-stagger="2">
             <h3>Graphic &amp; brand design</h3>
             <p>Logos, banners, social kits, flyers, business cards, and print-ready promo material in a visual identity that's yours.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card reveal-scale" data-stagger="3">
             <h3>Hosting &amp; management</h3>
             <p>Kink-friendly hosting, SSL, backups, updates, and monitoring. We keep the lights on so you can keep working.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card reveal-scale" data-stagger="4">
             <h3>Consulting</h3>
             <p>Virtual sessions on brand strategy, platform risk, payment processing, privacy, and getting found without getting doxxed.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card reveal-scale" data-stagger="5">
             <h3>Web education</h3>
             <p>Hands-on training: learn to update your own site, run your mailing list, manage your calendar. Leave knowing how your stuff works.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card reveal-scale" data-stagger="6">
             <h3>Migrations &amp; rescues</h3>
             <p>Got deplatformed? We'll pull your content off the burning platform and rebuild it somewhere stable.</p>
           </article>
@@ -170,24 +172,24 @@
       </section>
 
       <!-- ===== RATES / SLIDING SCALE ===== -->
-      <section class="rates" id="rates">
-        <header class="section-header">
+      <section class="rates reveal-up" id="rates">
+        <header class="section-header reveal-up" data-stagger="1">
           <p class="eyebrow">Rates</p>
           <h2>Sliding scale. No questions asked.</h2>
           <p class="lead">Every service moves ±40% around a regular rate that already sits below industry standard. Pick the tier that fits your month.</p>
         </header>
         <div class="scale-explainer">
-          <div class="scale-tier">
+          <div class="scale-tier reveal-left" data-stagger="1">
             <p class="scale-tier__label">Access rate</p>
             <p class="scale-tier__amt">up to 40% less</p>
             <p>Take it if you need it. No justification, no proof of hardship, no awkward conversation.</p>
           </div>
-          <div class="scale-tier scale-tier--core">
+          <div class="scale-tier scale-tier--core reveal-scale" data-stagger="2">
             <p class="scale-tier__label">Regular rate</p>
             <p class="scale-tier__amt">the anchor</p>
             <p>Our standard pricing — deliberately lower than industry rates because most of you have been overcharged forever.</p>
           </div>
-          <div class="scale-tier">
+          <div class="scale-tier reveal-right" data-stagger="3">
             <p class="scale-tier__label">Pay-it-forward rate</p>
             <p class="scale-tier__amt">up to 40% more</p>
             <p>If you're flush this month, your extra funds someone else's access rate. Community mutual aid, invoiced.</p>
@@ -236,7 +238,7 @@
       </section>
 
       <!-- ===== ESTIMATOR + INQUIRY ===== -->
-      <section class="estimate section-alt" id="estimate">
+      <section class="estimate section-alt reveal-up" id="estimate">
         <header class="section-header">
           <p class="eyebrow">Estimate &amp; inquire</p>
           <h2>Start your project</h2>
@@ -335,48 +337,84 @@
         </div>
       </section>
       <!-- ===== PRINCIPLES ===== -->
-      <section class="principles" id="principles">
-        <header class="section-header">
+      <section class="principles reveal-up" id="principles">
+        <header class="section-header reveal-up" data-stagger="1">
           <p class="eyebrow">Principles</p>
           <h2>What actually gets you shut down — and how we fight it.</h2>
         </header>
         <div class="principles-grid">
-          <article class="principle-card">
-            <span class="principle-card__num">01</span>
-            <h3>No platform dependency</h3>
-            <p>Your site lives on infrastructure you control — not rented land on a platform that can change its rules overnight. You own the domain, the content, the data.</p>
+          <article class="principle-card" data-stagger="1" tabindex="0" role="button" aria-pressed="false" aria-label="Flip to reveal: No platform dependency">
+            <div class="principle-card__inner">
+              <div class="principle-card__front">
+                <span class="principle-card__num">01</span>
+                <h3>No platform dependency</h3>
+              </div>
+              <div class="principle-card__back">
+                <p>Your site lives on infrastructure you control — not rented land on a platform that can change its rules overnight. You own the domain, the content, the data.</p>
+              </div>
+            </div>
           </article>
-          <article class="principle-card">
-            <span class="principle-card__num">02</span>
-            <h3>Privacy by default</h3>
-            <p>WHOIS privacy, discreet billing, optional pseudonyms, no third-party trackers unless you ask. Your clients' data stays yours.</p>
+          <article class="principle-card" data-stagger="2" tabindex="0" role="button" aria-pressed="false" aria-label="Flip to reveal: Privacy by default">
+            <div class="principle-card__inner">
+              <div class="principle-card__front">
+                <span class="principle-card__num">02</span>
+                <h3>Privacy by default</h3>
+              </div>
+              <div class="principle-card__back">
+                <p>WHOIS privacy, discreet billing, optional pseudonyms, no third-party trackers unless you ask. Your clients' data stays yours.</p>
+              </div>
+            </div>
           </article>
-          <article class="principle-card">
-            <span class="principle-card__num">03</span>
-            <h3>Accessibility is non-negotiable</h3>
-            <p>Keyboard navigation, colour contrast, semantic HTML, screen-reader support. Your site works for everyone — no exceptions.</p>
+          <article class="principle-card" data-stagger="3" tabindex="0" role="button" aria-pressed="false" aria-label="Flip to reveal: Accessibility is non-negotiable">
+            <div class="principle-card__inner">
+              <div class="principle-card__front">
+                <span class="principle-card__num">03</span>
+                <h3>Accessibility is non-negotiable</h3>
+              </div>
+              <div class="principle-card__back">
+                <p>Keyboard navigation, colour contrast, semantic HTML, screen-reader support. Your site works for everyone — no exceptions.</p>
+              </div>
+            </div>
           </article>
-          <article class="principle-card">
-            <span class="principle-card__num">04</span>
-            <h3>Consent &amp; age-gating</h3>
-            <p>Built-in age verification gates, consent-forward UX patterns, clear content warnings. Tools that keep you compliant without being awkward.</p>
+          <article class="principle-card" data-stagger="4" tabindex="0" role="button" aria-pressed="false" aria-label="Flip to reveal: Consent and age-gating">
+            <div class="principle-card__inner">
+              <div class="principle-card__front">
+                <span class="principle-card__num">04</span>
+                <h3>Consent &amp; age-gating</h3>
+              </div>
+              <div class="principle-card__back">
+                <p>Built-in age verification gates, consent-forward UX patterns, clear content warnings. Tools that keep you compliant without being awkward.</p>
+              </div>
+            </div>
           </article>
-          <article class="principle-card">
-            <span class="principle-card__num">05</span>
-            <h3>Community over competition</h3>
-            <p>Sliding scale, pay-it-forward, mutual aid invoicing. If you can pay more, you keep the doors open for someone who can't.</p>
+          <article class="principle-card" data-stagger="5" tabindex="0" role="button" aria-pressed="false" aria-label="Flip to reveal: Community over competition">
+            <div class="principle-card__inner">
+              <div class="principle-card__front">
+                <span class="principle-card__num">05</span>
+                <h3>Community over competition</h3>
+              </div>
+              <div class="principle-card__back">
+                <p>Sliding scale, pay-it-forward, mutual aid invoicing. If you can pay more, you keep the doors open for someone who can't.</p>
+              </div>
+            </div>
           </article>
-          <article class="principle-card">
-            <span class="principle-card__num">06</span>
-            <h3>Education as empowerment</h3>
-            <p>Every project includes training. You'll know how to update your own site, manage your list, and troubleshoot before you need us.</p>
+          <article class="principle-card" data-stagger="6" tabindex="0" role="button" aria-pressed="false" aria-label="Flip to reveal: Education as empowerment">
+            <div class="principle-card__inner">
+              <div class="principle-card__front">
+                <span class="principle-card__num">06</span>
+                <h3>Education as empowerment</h3>
+              </div>
+              <div class="principle-card__back">
+                <p>Every project includes training. You'll know how to update your own site, manage your list, and troubleshoot before you need us.</p>
+              </div>
+            </div>
           </article>
         </div>
       </section>
 
       <!-- ===== CONTACT ===== -->
       <!-- ===== CONTACT ===== -->
-      <section class="contact section-alt" id="contact">
+      <section class="contact section-alt reveal-up" id="contact">
         <header class="section-header">
           <p class="eyebrow">Contact</p>
           <h2>Let's talk.</h2>

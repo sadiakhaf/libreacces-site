@@ -169,6 +169,45 @@ document.addEventListener('DOMContentLoaded', () => {
   submitForm(document.getElementById('inquire-form'), '/api/estimate', 'inq-feedback');
   submitForm(document.getElementById('contact-form'), '/api/contact', 'contact-feedback');
 
+  // ── Principle card flip interaction ──
+  document.querySelectorAll('.principle-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const flipped = card.classList.contains('is-flipped');
+      card.classList.toggle('is-flipped', !flipped);
+      card.setAttribute('aria-pressed', String(!flipped));
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
+
+  // ── Scroll reveal animations ──
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px',
+    });
+
+    document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .principle-card, section').forEach(el => {
+      revealObserver.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .principle-card, section').forEach(el => {
+      el.classList.add('is-visible');
+    });
+  }
+
   // ── Smooth scroll for anchor links ──
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
